@@ -1,0 +1,17 @@
+{
+  "name": "iCount-bypass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "buildZip": "if [ \"$(git status --porcelain)\" ]; then echo 'Git repo must be empty' && exit 1; fi; cd ../..; zip -vr iCount-bypass.zip icount-bypass/ -x \"*.DS_Store\" -x \"**/node_modules/*\"  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-beta.3",
+    "shell-path": "^2.1.0"
+  }
+}
